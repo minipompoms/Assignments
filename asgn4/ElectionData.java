@@ -1,3 +1,4 @@
+//PULL
 package asgn4;
 
 import java.util.ArrayList;
@@ -10,8 +11,6 @@ public class ElectionData extends Observable {
 	private Integer totalVotes;
 	private Integer votedRepublican;
 	private Integer votedDemocratic;
-
-	private String legalMsg;
 	
 	public ElectionData()	{}
 
@@ -24,7 +23,7 @@ public class ElectionData extends Observable {
 	
 	public void setMeasurements(ArrayList<Integer> republican, ArrayList<String> states,
 			 ArrayList<Integer>democrat,Integer totalVotes, 
-			 Integer votedRepublican, Integer votedDemocratic, String legalMsg)
+			 Integer votedRepublican, Integer votedDemocratic)
 	{
 		this.republican = republican;
 		this.states = states;
@@ -32,8 +31,7 @@ public class ElectionData extends Observable {
 		this.totalVotes = totalVotes;
 		this.votedRepublican = votedRepublican;
 		this.votedDemocratic = votedDemocratic;
-		this.legalMsg = legalMsg;
-		resultsChanged();
+ 		resultsChanged();
 	}
 	
 	
@@ -66,13 +64,5 @@ public class ElectionData extends Observable {
 		return totalVotes;
 	}
 	
-	public String getLegalMsg()
-	{
-		return legalMsg;
-	}
-	
-	
-	
-
 	
 }
